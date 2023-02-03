@@ -1,0 +1,14 @@
+/*
+Theme Name: Twenty Twelve - Child (minimal)
+Description: Child theme without editing fonts
+Template: twentytwelve
+Author: WordPress Core Contributors
+Author URI: https://core.trac.wordpress.org/ticket/55985
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0
+*/
+
+body {
+	background-color: lightblue;
+}

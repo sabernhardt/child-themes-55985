@@ -1,0 +1,6 @@
+
+:root .editor-styles-wrapper,
+.editor-default-block-appender textarea.editor-default-block-appender__content,
+.editor-post-title__block .editor-post-title__input {
+	font-family: "PT Sans Narrow", sans-serif;
+}

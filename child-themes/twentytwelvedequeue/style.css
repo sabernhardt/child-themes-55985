@@ -1,0 +1,24 @@
+/*
+Theme Name: Twenty Twelve - Dequeue Font Styles
+Description: Removes font URL by dequeuing
+Template: twentytwelve
+Author: WordPress Core Contributors
+Author URI: https://core.trac.wordpress.org/ticket/55985
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0
+*/
+
+/* sans-serif: replace Open Sans */
+
+body {
+	font-family: "Trebuchet MS", Roboto, Helvetica, sans-serif;
+}
+
+/*
+The `custom-font-enabled` class should not appear when dequeuing the font stylesheet.
+If the class is used, make it obvious.
+*/
+body.custom-font-enabled {
+	font-family: "Comic Sans MS", cursive;
+}
