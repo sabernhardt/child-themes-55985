@@ -1,6 +1,6 @@
 <?php
 
-function twentytwelve_new_fonts_url() {
+function wptrac55985_twentytwelve_new_fonts_url() {
 	return get_stylesheet_directory_uri() . '/assets/fonts/noto-sans-font.css';
 }
 
@@ -18,17 +18,14 @@ add_action( 'wp_enqueue_scripts', 'wptrac55985_dequeue_font_script', 11 );
 add_action( 'enqueue_block_editor_assets', 'wptrac55985_dequeue_font_script', 11 );
 
 function wptrac55985_replace_font_in_classic_editor( $mce_css ) {
-	$mce_css  = str_replace(
-		',' . twentytwelve_get_font_url(),
-		',' . twentytwelve_new_fonts_url(),
-		$mce_css
-	);
+	remove_filter( 'mce_css', 'twentytwelve_mce_css' );
+	$mce_css .= ',' . wptrac55985_twentytwelve_new_fonts_url();
 	// Add stylesheet with custom font.
 	$mce_css .= ',' . get_stylesheet_directory_uri() . '/css/editor-style.css';
 
 	return $mce_css;
 }
-add_filter( 'mce_css', 'wptrac55985_replace_font_in_classic_editor', 11 );
+add_filter( 'mce_css', 'wptrac55985_replace_font_in_classic_editor', 9 );
 
 /*
 	// Try this instead ONLY IF the function becomes pluggable with `function_exists`.
