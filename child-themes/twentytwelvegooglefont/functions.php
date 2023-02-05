@@ -8,7 +8,7 @@ function wptrac55985_dequeue_font_script() {
 	wp_dequeue_style( 'twentytwelve-fonts' );
 	wp_enqueue_style(
 		'twentytwelve-new-font',
-		twentytwelve_google_fonts_url(),
+		wptrac55985_twentytwelve_google_fonts_url(),
 		array(),
 		false,
 		'all'
